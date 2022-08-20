@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <div class="encriptador-fondo">
+      <div class="encriptador-logo">
+        <img src="img/logo-a.svg" alt="Logo alura izquierda superior" />
+      </div>
+
+      <div class="encriptador-texto-entrada">
+        <textarea
+          name="texto-entrada"
+          id="texto-entrada"
+          cols="30"
+          rows="3"
+          placeholder="Ingresa tu mensaje aquí."
+          pattern="^[a-z]+"
+        ></textarea>
+      </div>
+
+      <div class="encriptador-aviso">
+        <img src="img/Atencion.svg" alt="icono de aviso" />
+        <label for="">Solo letras minúsculas y sin acentos.</label>
+      </div>
+
+      <div class="encriptador-botones">
+        <input id="boton-encriptar" type="submit" value="Encriptar" />
+        <input id="boton-desencriptar" type="submit" value="Desencriptar" />
+      </div>
+
+      <div class="encriptador-lateral">
+        <img
+          id="encriptador-muneco"
+          src="img/Muñeco.svg"
+          alt="Muñeco del encriptador"
+        />
+
+        <div class="mensaje-lateral" id="mensaje-lateral">
+          <label id="mensaje-1" for="">Ningún mensaje fue encontrado</label>
+          <label id="mensaje-2" for=""
+            >Ingresa el texto que desees encriptar o desencriptar</label
+          >
+        </div>
+
+        <textarea
+          name=""
+          id="texto-encriptado"
+          cols="30"
+          rows="10"
+          disabled
+        ></textarea>
+        <input id="boton-copiar" type="submit" value="Copiar" />
+      </div>
+    </div>
+    <script src="js/code.js"></script>
+  </body>
+</html>
