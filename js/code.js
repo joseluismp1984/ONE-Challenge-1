@@ -1,12 +1,24 @@
-document.getElementById("texto-encriptado").style.visibility = "hidden";
-document.getElementById("boton-copiar").style.visibility = "hidden";
-/*======================================================================*/
-/*======================================================================*/
+/*-----------------------------------------------*/
+const textoInicial = document.getElementById("main-input");
+const botonEncriptar = document.getElementById("main-botom-encriptar");
+const botonDesencriptar = document.getElementById("main-botom-desencriptar");
+const botonCopiar = document.getElementById("boton-copiar");
 
-let textoInicial = document.getElementById("texto-entrada");
-let botonEncriptar = document.getElementById("boton-encriptar");
-let botonDesencriptar = document.getElementById("boton-desencriptar");
-let botonCopiar = document.getElementById("boton-copiar");
+/*-----------------------------------------------*/
+const cuerpo = document.querySelector("body");
+const principal = document.querySelector("#main");
+const entrada = document.querySelector("#main-input");
+const aviso = document.querySelector("#main-alert");
+const botones = document.querySelector("#main-botom");
+const mensaje = document.querySelector("#main-message");
+const muneco = document.querySelector("#muneco");
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+document.getElementById("texto-encriptado").style.display = "none";
+document.getElementById("boton-copiar").style.display = "none";
+
+/*----------------------------------------------------------------*/
 
 let letras = [];
 let textoFinal = "";
@@ -79,11 +91,11 @@ function unirMensaje() {
 }
 
 function mostrar() {
-  document.getElementById("texto-entrada").value = "";
-  document.getElementById("encriptador-muneco").style.visibility = "hidden";
-  document.getElementById("mensaje-lateral").style.visibility = "hidden";
-  document.getElementById("texto-encriptado").style.visibility = "visible";
-  document.getElementById("boton-copiar").style.visibility = "visible";
+  document.getElementById("main-input").value = "";
+  muneco.className = "muneco off-muneco";
+  document.getElementById("main-message-cont").style.display = "none";
+  document.getElementById("texto-encriptado").style.display = "block";
+  document.getElementById("boton-copiar").style.display = "block";
   document.getElementById("texto-encriptado").innerHTML = textoFinal;
 }
 
@@ -95,52 +107,79 @@ function limpiar() {
 
 function validar() {
   valido = /[^a-z \s]/.test(textoInicial.value);
+  return valido;
 }
-/*======================================================================*/
-/*======================================================================*/
 
+function cambiarEstilo() {
+  cuerpo.className = "body-encriptado";
+  principal.className = "main main-encriptado";
+  entrada.className = "main-input main-input-encriptado";
+  aviso.className = "main-alert main-alert-encriptado";
+  botones.className = "main-botom main-botom-encriptado";
+  mensaje.className = "main-message main-message-encriptado";
+}
+
+function regresarEstilo() {
+  cuerpo.className = "";
+  principal.className = "main";
+  entrada.className = "main-input";
+  aviso.className = "main-alert";
+  botones.className = "main-botom";
+  mensaje.className = "main-message";
+  muneco.className = "muneco on-muneco";
+  document.getElementById("boton-copiar").style.display = "none";
+  document.getElementById("texto-encriptado").style.display = "none";
+  document.getElementById("main-message-cont").style.display = "flex";
+}
+
+/*======================================================================*/
 function encriptar() {
-  validar();
-
-  if (valido) {
-    alert("¡Solo letras minusculas!");
+  if (textoInicial.value == "") {
+    alert("No Ha Escrito Nada");
   } else {
-    limpiar();
-    separarLetras();
-    encriptarMensaje();
-    unirMensaje();
-    mostrar();
+    validar();
+    if (valido) {
+      alert("¡Solo letras minusculas!");
+    } else {
+      limpiar();
+      separarLetras();
+      encriptarMensaje();
+      unirMensaje();
+      mostrar();
+      cambiarEstilo();
+    }
   }
 }
 
 botonEncriptar.onclick = encriptar;
 /*======================================================================*/
-/*======================================================================*/
-
 function copiar() {
   textoEncriptado = document.getElementById("texto-encriptado");
   navigator.clipboard.writeText(textoEncriptado.value);
   alert("¡Ha copiado el texto!");
+  regresarEstilo();
 }
 
 botonCopiar.onclick = copiar;
 /*======================================================================*/
-/*======================================================================*/
-
 function desencriptar() {
-  validar();
-
-  if (valido) {
-    alert("¡Solo letras minusculas!");
+  if (textoInicial.value == "") {
+    alert("No Ha Escrito Nada");
   } else {
-    limpiar();
-    separarLetras();
-    desencriptarMensaje();
-    unirMensaje();
-    mostrar();
+    validar();
+
+    if (valido) {
+      alert("¡Solo letras minusculas!");
+    } else {
+      limpiar();
+      separarLetras();
+      desencriptarMensaje();
+      unirMensaje();
+      mostrar();
+      cambiarEstilo();
+    }
   }
 }
 
 botonDesencriptar.onclick = desencriptar;
-/*======================================================================*/
 /*======================================================================*/

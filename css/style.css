@@ -1,524 +1,314 @@
-/*==========ESTILOS INDEX.HTML==========*/
-/*======================================*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
-/*==========ESTILOS PAGINA DESKTOP======*/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 100vw;
-  height: 100vh;
+  height: 127.4vh;
+  font-size: 1.6rem;
+  max-width: 100%;
 }
 
-.encriptador-fondo {
-  position: absolute;
+/*===============================================*/
+/*---------------Estilos del Header--------------*/
+/*===============================================*/
+
+.head {
+  width: 100vw;
+  height: 12.3vh;
   background-color: #f3f5fc;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  max-width: 100%;
 }
 
-/* @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-display: swap;
-} */
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-/*=====================================*/
-.encriptador-logo {
+.head-logo {
   position: absolute;
-  width: 2.16vw;
-  height: 3.33vw;
-  top: 3.9vh;
-  left: 5.83vw;
+  top: 3.1vw;
+  left: 4.3vh;
+  width: 8.5vw;
+  height: 6.2vh;
 }
 
-.encriptador-logo img {
-  width: 100%;
-  height: 100%;
+/*===============================================*/
+/*----------------Estilos del Main---------------*/
+/*===============================================*/
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 107.7vh;
+  background-color: #f3f5fc;
+  max-width: 100%;
 }
-/*======================================*/
-.encriptador-texto-entrada {
+
+/*----------textarea----------*/
+.main-input {
   position: absolute;
-  width: 40.1vw;
-  top: 16.4vh;
-  left: 16.7vw;
-}
-
-.encriptador-texto-entrada textarea {
-  width: 100%;
-  /*----------------*/
-  font-family: "Inter";
-  font-size: 2.22vw;
-  font-weight: 400;
-  line-height: 150%;
+  top: 19.5vh;
+  left: 4.3vw;
+  width: 91.5vw;
+  height: 33vh;
   color: #0a3871;
-
-  text-align: left;
-  vertical-align: top;
+  background-color: transparent;
   border: none;
-  background-color: #f3f5fc;
-}
+  border-radius: 0.5rem;
 
-.encriptador-texto-entrada textarea:focus {
-  outline: none;
-}
-/*===============================*/
-.encriptador-aviso {
-  position: absolute;
-  width: 17vw;
-  height: 1.25vh;
-  top: 83.1vh;
-  left: 16.7vw;
-  align-content: center;
-}
-
-.encriptador-aviso img {
-  display: inline-block;
-  width: 1.1vw;
-  height: 1.1vw;
-}
-
-.encriptador-aviso label {
-  width: 14.2vw;
-  height: 1.25vw;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 2.5rem;
+  line-height: 150%;
+}
+
+.main-input:focus {
+  outline: none;
+}
+
+.main-input::placeholder {
+  color: #0a3871;
+}
+
+/*----------letrero aviso----------*/
+.main-alert {
+  position: absolute;
+  top: 58vh;
+  left: 4.3vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.1vw;
+  width: 61.1%;
+  height: 2.3vh;
+}
+
+.main-alert-icono {
+  width: 4.3vw;
+  height: 2.1vh;
+}
+
+.main-alert-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 150%;
   color: #495057;
-  opacity: 0.8;
-  text-align: top;
 }
 
-/*=================================*/
-.encriptador-botones {
+/*------------botones------------*/
+.main-botom {
   position: absolute;
-  width: 47.2vw;
-  height: 4.6vw;
-  top: 86.4vh;
-  left: 16.7vw;
+  top: 62.4vh;
+  left: 4.3vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.6vh;
+  width: 91.5%;
+  height: 20.3vh;
 }
 
-#boton-encriptar {
-  width: 22.8vw;
-  height: 4.6vw;
+.main-botom-encriptar {
   background-color: #0a3871;
+  width: 91.5vw;
+  height: 8.6vh;
+  border: 0.1rem solid #0a3871;
+  border-radius: 2.4rem;
   color: white;
-  padding: 0;
-  border: 1px solid #0a3871;
-  border-radius: 1.7vw;
-  font-family: "Inter";
-  font-size: 1.11vw;
 }
 
-#boton-desencriptar {
-  width: 22.8vw;
-  height: 4.6vw;
-  background-color: #d8dfe8;
+.main-botom-desencriptar {
+  background-color: transparent;
+  width: 91.5vw;
+  height: 8.6vh;
+  border: 0.1rem solid #0a3871;
+  border-radius: 2.4rem;
   color: #0a3871;
-  padding: 0;
-  border: 1px solid #0a3871;
-  border-radius: 1.7vw;
-  font-family: "Inter";
-  font-size: 1.11vw;
 }
-/*===============================*/
-.encriptador-lateral {
+
+/*-------Cuadro Texto Informativo-------*/
+.main-message {
   position: absolute;
-  width: 27.8vw;
-  height: 92.2vh;
-  left: 69.4vw;
-  top: 3.9vh;
+  left: 6.4vw;
+  top: 90.9vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87.2vw;
+  height: 23.9vh;
+  padding: 4.1vh 8.5vw;
   background-color: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 2.22vw;
+  border-radius: 3.2rem;
 }
 
-#encriptador-muneco {
-  position: relative;
-  width: 23.3vw;
-  height: 29.7vh;
-  left: 2.2vw;
-  top: 23.7vh;
-}
-
-.mensaje-lateral {
+.muneco {
   position: absolute;
   width: 23.3vw;
-  height: 21vh;
-  left: 2.2vw;
-  top: 56.5vh;
+  height: 27.5vh;
+  top: 13vh;
+  left: 2.9vw;
+  display: none;
 }
 
-#mensaje-1 {
-  display: block;
-  width: 23.3vw;
-  height: 10vh;
+.muneco img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-message-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 70.1vw;
+  height: 15.7vh;
+}
+
+.main-message-text1 {
+  color: #343a40;
   font-family: "Inter";
+  font-style: normal;
   font-weight: 700;
-  font-size: 1.8vw;
+  font-size: 2.4rem;
   line-height: 120%;
   text-align: center;
-  color: #343a40;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
-#mensaje-2 {
-  display: block;
-  width: 23.3vw;
-  height: 1.25vw;
-  height: 8vh;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 1.2vw;
-  line-height: 150%;
-  text-align: center;
+.main-message-text2 {
   color: #495057;
-  margin-top: 1.11vw;
-}
-/*==============ESTILOS PAGINA TABLET================*/
-@media screen and (max-width: 920px) {
-  /*=====================================*/
-  .encriptador-logo {
-    width: 4vw;
-    height: 4vw;
-    top: 6.25vh;
-    left: 5.2vw;
-  }
-
-  .encriptador-logo img {
-    width: 100%;
-    height: 100%;
-  }
-  /*======================================*/
-  .encriptador-texto-entrada {
-    width: 89.6vw;
-    top: 20.4vh;
-    left: 5.2vw;
-  }
-
-  .encriptador-texto-entrada textarea {
-    width: 100%;
-    font-size: 4.2vw;
-  }
-
-  /*===============================*/
-  .encriptador-aviso {
-    width: 40vw;
-    height: 2.34vh;
-    top: 71.2vh;
-    left: 5.2vw;
-  }
-
-  .encriptador-aviso img {
-    width: 2.1vw;
-    height: 2.1vw;
-  }
-
-  .encriptador-aviso label {
-    width: 32vw;
-    height: 1.6vw;
-    font-size: 2.5vw;
-  }
-  /*=================================*/
-  .encriptador-botones {
-    width: 89.6vw;
-    height: 5.7vh;
-    top: 74.1vh;
-    left: 5.2vw;
-  }
-
-  #boton-encriptar {
-    width: 43.2vw;
-    height: 100%;
-    font-size: 2.7vw;
-    border-radius: 3.1vw;
-  }
-
-  #boton-desencriptar {
-    width: 43.2vw;
-    height: 100%;
-    font-size: 2.7vw;
-    border-radius: 3.1vw;
-  }
-
-  #encriptador-muneco {
-    display: none;
-  }
-
-  .encriptador-lateral {
-    width: 89.6vw;
-    height: 11.3vh;
-    left: 5.2vw;
-    top: 85.3vh;
-    border-radius: 4.2vw;
-  }
-
-  .mensaje-lateral {
-    width: 81.25vw;
-    height: 5.9vh;
-    left: 4.2vw;
-    top: 3vh;
-  }
-
-  #mensaje-1 {
-    width: 100%;
-    height: 2.5vh;
-    font-size: 3.75vw;
-  }
-
-  #mensaje-2 {
-    display: block;
-    width: 100%;
-    height: 2.5vh;
-    font-size: 2.6vw;
-  }
-}
-
-/*==============ESTILOS PAGINA CELULAR================*/
-@media screen and (max-width: 420px) {
-  .encriptador-logo {
-    width: 8.5vw; /*ya lo hice*/
-    height: 8.5vw; /*ya lo hice*/
-    top: 2.6vh; /*ya lo hice*/
-    left: 4.3vw; /*ya lo hice*/
-  }
-
-  .encriptador-logo img {
-    width: 100%; /*ya lo hice*/
-    height: 100%; /*ya lo hice*/
-  }
-  /*======================================*/
-  .encriptador-texto-entrada {
-    width: 91.5vw; /*ya lo hice*/
-    top: 16.3vh; /*ya lo hice*/
-    left: 4.3vw; /*ya lo hice*/
-  }
-
-  .encriptador-texto-entrada textarea {
-    width: 100%; /*ya lo hice*/
-    font-size: 8.5vw; /*ya lo hice*/
-  }
-
-  /*===============================*/
-  .encriptador-aviso {
-    width: 61.1vw; /*ya lo hice*/
-    height: 4.8vw; /*ya lo hice*/
-    top: 48.3vh; /*ya lo hice*/
-    left: 4.3vw; /*ya lo hice*/
-  }
-
-  .encriptador-aviso img {
-    width: 4.3vw; /*ya lo hice*/
-    height: 4.3vw; /*ya lo hice*/
-  }
-
-  .encriptador-aviso label {
-    width: 54.7vw; /*ya lo hice*/
-    height: 1.93vw; /*ya lo hice*/
-    font-size: 3.2vw; /*ya lo hice*/
-  }
-  /*=================================*/
-  .encriptador-botones {
-    width: 91.5vw; /*ya lo hice*/
-    height: 16.9vh; /*ya lo hice*/
-    top: 52vh; /*ya lo hice*/
-    left: 4.3vw; /*ya lo hice*/
-  }
-
-  #boton-encriptar {
-    width: 100%; /*ya lo hice*/
-    height: 7.2vh; /*ya lo hice*/
-    font-size: 4.3vw; /*ya lo hice*/
-    border-radius: 6.4vw;
-  }
-
-  #boton-desencriptar {
-    width: 100%; /*ya lo hice*/
-    height: 7.2vh; /*ya lo hice*/
-    font-size: 4.3vw; /*ya lo hice*/
-    margin-top: 5.1vw;
-    border-radius: 6.4vw;
-  }
-
-  #encriptador-muneco {
-    display: none;
-  }
-
-  .encriptador-lateral {
-    width: 87.2vw; /*ya lo hice*/
-    height: 19.9vh; /*ya lo hice*/
-    left: 6.4vw; /*ya lo hice*/
-    top: 75.8vh; /*ya lo hice*/
-    border-radius: 8.5vw;
-  }
-
-  .mensaje-lateral {
-    width: 70.1vw; /*ya lo hice*/
-    height: 13.1vh; /*ya lo hice*/
-    left: 8.5vw;
-    top: 3.4vh;
-  }
-
-  #mensaje-1 {
-    width: 100%; /*ya lo hice*/
-    height: 6.2vh; /*ya lo hice*/
-    font-size: 6.4vw; /*ya lo hice*/
-  }
-
-  #mensaje-2 {
-    display: block;
-    width: 100%; /*ya lo hice*/
-    height: 5.1vh; /*ya lo hice*/
-    font-size: 4.3vw; /*ya lo hice*/
-    margin-top: 15px;
-  }
-}
-
-/*==========ESTILOS RESULTADO.HTML==========*/
-/*======================================*/
-
-/*==========ESTILOS PAGINA DESKTOP======*/
-#texto-encriptado {
-  /* display: none; */
-  position: absolute;
-  top: 3.12vh;
-  left: 2.22vw;
-  width: 23.3vw;
-  height: 76.3vh;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.67vw;
+  font-size: 1.6rem;
   line-height: 150%;
-  color: #495057;
+  text-align: center;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
 
-  text-align: left;
-  vertical-align: top;
+/*-----textarea con el mensaje------*/
+.texto-encriptado {
+  display: none;
+  position: absolute;
+  width: 74.4vw;
+  height: 55.6vh;
+  top: 4.1vh;
+  left: 8.5vw;
+  color: #495057;
   border: none;
-  background-color: transparent;
-}
-
-#texto-encriptado:focus {
-  outline: none;
-}
-
-#boton-copiar {
-  position: absolute;
-  /* display: none; */
-  width: 23.3vw;
-  height: 6.5vh;
-  border: 1px solid #0a3871;
-  border-radius: 1.7vw;
-  align-items: center;
-  background-color: transparent;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.11vw;
-  line-height: 1.3px;
-  text-align: center;
-  top: 82.52vh;
-  left: 2.22vw;
+  font-size: 2.4rem;
+  line-height: 150%;
+}
+
+.boton-copiar {
+  display: none;
+  position: absolute;
+  width: 74.4vw;
+  height: 8.6vh;
+  top: 63.8vh;
+  left: 8.5vw;
+  background-color: transparent;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
   color: #0a3871;
 }
 
-/*==============ESTILOS PAGINA TABLET================*/
-@media screen and (max-width: 920px) {
-  .encriptador-logo {
-    top: 5.42vh;
-    left: 5.21vw;
-  }
-
-  .encriptador-texto-entrada {
-    top: 17.34vh;
-    left: 5.21vw;
-  }
-
-  .encriptador-aviso {
-    top: 60.4vh;
-    left: 5.21vw;
-  }
-
-  .encriptador-botones {
-    height: 4.84vh;
-    top: 62.86vh;
-    left: 5.21vw;
-  }
-
-  .encriptador-lateral {
-    top: 72.33vh;
-    left: 5.21vw;
-    height: 24.8vh;
-  }
-
-  #texto-encriptado {
-    top: 2.31vh;
-    left: 4.17vw;
-    width: 81.25vw;
-    height: 13vh;
-    font-size: 3.12vw;
-  }
-
-  #boton-copiar {
-    top: 17.63vh;
-    left: 4.17vw;
-    width: 81.25vw;
-    height: 4.84vh;
-    border-radius: 4.2vw;
-    font-size: 2.7vw;
-  }
+/*===============================================*/
+/*---------------Estilos del Footer--------------*/
+/*===============================================*/
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7.4vh;
+  padding-left: 4.3vw;
+  padding-right: 10vw;
+  background-color: #f3f5fc;
+  max-width: 100%;
 }
 
-/*==============ESTILOS PAGINA CELULAR================*/
-@media screen and (max-width: 420px) {
-  .encriptador-logo {
-    width: 8.11vw;
-    height: 8.11vw;
-    top: 1.4vh;
-    left: 4.3vw;
-  }
-  .encriptador-texto-entrada {
-    width: 91.5vw;
-    top: 8.86vh;
-    left: 4.3vw;
+.foot-text {
+  color: #495057;
+  color: black;
+  font-family: "Inter";
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+/*=========================================================*/
+/*---------------Estilos Despues de encriptar--------------*/
+/*=========================================================*/
+
+/*----------------Encriptado--------------------*/
+.body-encriptado {
+  height: 218vh;
+}
+
+.main-encriptado {
+  height: 210.6vh;
+}
+
+/*-----textarea de entrada-----*/
+.main-input-encriptado {
+  position: absolute;
+  top: 19.6vh;
+  left: 4.3vw;
+  width: 91.5vw;
+  height: 80.3vh;
+}
+
+/*------aviso de minusculas-----*/
+.main-alert-encriptado {
+  position: absolute;
+  top: 108vh;
+  left: 4.3vw;
+}
+
+/*-----contenedor de botones-----*/
+.main-botom-encriptado {
+  position: absolute;
+  top: 112.4vh;
+  left: 4.3vw;
+}
+
+/*El cuadro contenedor del text area y el boton copiar*/
+.main-message-encriptado {
+  position: absolute;
+  left: 4.3vw;
+  top: 141vh;
+  width: 91.5vw;
+  height: 76.5vh;
+}
+
+/*               DISEÑO TABLET             */
+@media screen and (min-width: 490px) {
+  .main-botom {
+    flex-direction: row;
   }
 
-  .encriptador-aviso {
-    top: 47.5vh;
-  }
-
-  .encriptador-botones {
-    top: 50.96vh;
-  }
-
-  .encriptador-lateral {
-    width: 91.5vw;
-    height: 27vh;
-    left: 4.3vw;
-    top: 70vh;
-    border-radius: 6vw;
-  }
-
-  #texto-encriptado {
-    top: 2.31vh;
-    left: 4.17vw;
-    width: 81.25vw;
-    height: 16vh;
-    font-size: 3.12vw;
-  }
-
-  #boton-copiar {
-    top: 21vh;
-    left: 4.17vw;
-    width: 81.25vw;
-    height: 4.84vh;
-    border-radius: 4.2vw;
-    font-size: 4.3vw;
+  .muneco {
+    display: none;
   }
 }

@@ -4,61 +4,132 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Encriptador</title>
+    <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/style-desktop.css"
+      media="screen and (min-width: 800px)"
+    />
   </head>
+
   <body>
-    <div class="encriptador-fondo">
-      <div class="encriptador-logo">
-        <img src="img/logo-a.svg" alt="Logo alura izquierda superior" />
-      </div>
-
-      <div class="encriptador-texto-entrada">
-        <textarea
-          name="texto-entrada"
-          id="texto-entrada"
-          cols="30"
-          rows="3"
-          placeholder="Ingresa tu mensaje aquí."
-          pattern="^[a-z]+"
-        ></textarea>
-      </div>
-
-      <div class="encriptador-aviso">
-        <img src="img/Atencion.svg" alt="icono de aviso" />
-        <label for="">Solo letras minúsculas y sin acentos.</label>
-      </div>
-
-      <div class="encriptador-botones">
-        <input id="boton-encriptar" type="submit" value="Encriptar" />
-        <input id="boton-desencriptar" type="submit" value="Desencriptar" />
-      </div>
-
-      <div class="encriptador-lateral">
+    <header class="head" id="head" name="head">
+      <figure class="head-logo" name="head-logo" id="head-logo">
         <img
-          id="encriptador-muneco"
-          src="img/Muñeco.svg"
-          alt="Muñeco del encriptador"
+          src="./img/logo-alura.svg"
+          alt="Logo de alura latam"
+          title="Alura Latam"
         />
+      </figure>
+    </header>
 
-        <div class="mensaje-lateral" id="mensaje-lateral">
-          <label id="mensaje-1" for="">Ningún mensaje fue encontrado</label>
-          <label id="mensaje-2" for=""
-            >Ingresa el texto que desees encriptar o desencriptar</label
+    <main class="main" name="main" id="main">
+      <textarea
+        class="main-input"
+        name="main-input"
+        id="main-input"
+        cols="30"
+        rows="4"
+        placeholder="Ingrese su texto aquí"
+      ></textarea>
+
+      <section class="main-alert" id="main-alert" name="main-alert">
+        <figure
+          class="main-alert-icono"
+          name="main-alert-icono"
+          id="main-alert-icono"
+        >
+          <img src="./img/atencion.svg" alt="Imagen de alerta" />
+        </figure>
+
+        <span
+          class="main-alert-text"
+          name="main-alert-text"
+          id="main-alert-text"
+          >Solo letras minúsculas y sin acentos</span
+        >
+      </section>
+
+      <section class="main-botom" name="main-botom" id="main-botom">
+        <input
+          class="main-botom-encriptar"
+          name="main-botom-encriptar"
+          id="main-botom-encriptar"
+          type="submit"
+          value="Encriptar"
+        />
+        <input
+          class="main-botom-desencriptar"
+          name="main-botom-desencriptar"
+          id="main-botom-desencriptar"
+          type="submit"
+          value="Desencriptar"
+        />
+      </section>
+
+      <section class="main-message" id="main-message" name="main-message">
+        <figure class="muneco" id="muneco" name="muneco">
+          <img src="./img/muñeco.svg" alt="Imagen del muñeco de encriptar" />
+        </figure>
+
+        <div
+          class="main-message-cont"
+          name="main-message-cont"
+          id="main-message-cont"
+        >
+          <span class="main-message-text1">Ningún mensaje fue encontrado</span>
+          <span class="main-message-text2"
+            >ingresa el texto que desees encriptar o desencriptar.</span
           >
         </div>
 
         <textarea
-          name=""
+          class="texto-encriptado"
+          name="texto-encriptado"
           id="texto-encriptado"
           cols="30"
-          rows="10"
-          disabled
+          rows="5"
         ></textarea>
-        <input id="boton-copiar" type="submit" value="Copiar" />
-      </div>
-    </div>
-    <script src="js/code.js"></script>
+
+        <input
+          class="boton-copiar"
+          name="boton-copiar"
+          id="boton-copiar"
+          type="submit"
+          value="Copiar"
+        />
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-text">Ing. José Luis Martínez</p>
+
+      <figure class="foot-logos">
+        <picture class="foot-github">
+          <a href="https://github.com/joseluismp1984" target="_blank"
+            ><img src="./img/logo-github.svg" alt="Logo GitHub con enlace"
+            title:="https://github.com/joseluismp1984" /></a
+          >
+        </picture>
+
+        <picture class="foot-linkedin">
+          <a
+            href="https://www.linkedin.com/in/jose-luis-martinez-palmeth-2686097b/"
+            target="_blank"
+            ><img src="./img/logo-linkedin.svg" alt="Logo LinkInd con enlace"
+            title:="https://www.linkedin.com/in/jose-luis-martinez-palmeth-2686097b/"></a
+          >
+        </picture>
+      </figure>
+    </footer>
+    <script src="./js/code.js"></script>
   </body>
 </html>

@@ -1,0 +1,89 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+}
+/*===============================================*/
+/*---------------Estilos del Header--------------*/
+/*===============================================*/
+.head-logo {
+  position: absolute;
+  top: 2vw;
+  left: 4.3vh;
+}
+
+/*------------------*/
+.main {
+  height: 80.3vh;
+  flex-direction: row;
+}
+
+.main-input {
+  width: 40.1vw;
+  height: 50vh;
+  top: 15.2vh;
+  left: 16.7vw;
+}
+
+.main-alert {
+  top: 77vh;
+  left: 16.7vw;
+}
+
+.main-botom {
+  width: 47.2vw;
+  height: 6.1vh;
+  top: 80vh;
+  left: 16.7vw;
+}
+
+.main-message {
+  width: 27.8vw;
+  height: 85.4vh;
+  top: 3.6vh;
+  left: 69.4vw;
+}
+
+.muneco {
+  display: block;
+}
+
+.main-message-cont {
+  position: absolute;
+  width: 23.3vw;
+  height: 11vh;
+  top: 52.4vh;
+  left: 2.2vw;
+}
+
+.texto-encriptado {
+  width: 23.3vw;
+  height: 70.6vh;
+  top: 2.9vh;
+  left: 2.2vw;
+}
+
+.boton-copiar {
+  width: 23.3vw;
+  height: 6.1vh;
+  top: 76.4vh;
+  left: 2.2vw;
+}
+
+/*------------------*/
+
+.body-encriptado {
+  height: 100vh;
+}
+
+.main-encriptado {
+  height: 80.3vh;
+}
+
+.on-muneco {
+  display: block;
+}
+
+.off-muneco {
+  display: none;
+}
